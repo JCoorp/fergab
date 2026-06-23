@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Chidísima 3D</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">Visor 3D ligero · GitHub Pages</span>
+        <h1>Casa chidísima</h1>
+      </div>
+      <div class="status"><span id="statusDot" class="dot loading"></span><strong id="message">Cargando modelo...</strong></div>
+    </header>
+    <section class="viewerCard">
+      <canvas id="viewer"></canvas>
+      <div id="loader" class="loader"><div class="spinner"></div><h2>Cargando casa 3D</h2><p>Preparando modelo, luces y cámara...</p></div>
+      <div id="errorBox" class="errorBox hidden"><h2>No se pudo cargar</h2><p>Revisa que exista <strong>models/casa_chidisima.glb</strong>. En Smart TV puede fallar si el navegador no soporta WebGL.</p></div>
+      <div class="controls">
+        <button id="resetView">Reiniciar vista</button>
+        <button id="toggleRotate">Auto-rotación: On</button>
+        <button id="toggleKeyboardMove">Movimiento libre: On</button>
+        <button id="mouseLookBtn">Mirada mouse: Clic</button>
+        <button id="fullscreenBtn">Pantalla completa</button>
+      </div>
+      <div class="hud"><span>Clic en visor: cámara</span><span>WASD/Flechas: caminar</span><span>Q: subir</span><span>E: bajar</span><span>ESC: liberar mouse</span></div>
+    </section>
+    <section class="info">
+      <article><strong>Modelo incluido</strong><span>models/casa_chidisima.glb</span></article>
+      <article><strong>Movimiento libre</strong><span>WASD + Q/E + mouse</span></article>
+      <article><strong>GitHub Pages</strong><span>Sube todo a la raíz del repo</span></article>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
